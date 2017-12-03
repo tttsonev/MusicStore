@@ -59,6 +59,8 @@ namespace SeleniumWebDriverTemplateProject.Tests
 
             var albumList = homePageInstance.GetAlbums2();
 
+            Assert.IsTrue(albumList.Count > 0);
+
             albumList.First().Click();
 
             Thread.Sleep(3000);
