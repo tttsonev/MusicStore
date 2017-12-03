@@ -12,7 +12,7 @@ namespace SeleniumWebDriverTemplateProject {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.0.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
     internal sealed partial class GeneralSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static GeneralSettings defaultInstance = ((GeneralSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new GeneralSettings())));
@@ -25,7 +25,7 @@ namespace SeleniumWebDriverTemplateProject {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://store.demoqa.com/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://qaf2017demo1-001-site1.dtempurl.com/")]
         public string BaseURL {
             get {
                 return ((string)(this["BaseURL"]));
@@ -109,7 +109,7 @@ namespace SeleniumWebDriverTemplateProject {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("FranzFischbach@gmail.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Administrator@Test.com")]
         public string UserName {
             get {
                 return ((string)(this["UserName"]));
@@ -121,7 +121,7 @@ namespace SeleniumWebDriverTemplateProject {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pass1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("YouShouldChangeThisPassword1!")]
         public string Password {
             get {
                 return ((string)(this["Password"]));

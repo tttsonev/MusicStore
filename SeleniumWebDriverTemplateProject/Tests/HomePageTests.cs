@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumWebDriverTemplateProject.Helpers;
 using SeleniumWebDriverTemplateProject.Pages;
@@ -18,10 +19,14 @@ namespace SeleniumWebDriverTemplateProject.Tests
         { }
 
         [Test]
-        public void NavigateToHomePageTest()
+        public void AreOffersInHomePageTest()
         {
             var homePageInstance = HomePage.NavigateTo(this.Driver);
+
             Thread.Sleep(4000);
+
+            int albumCount = homePageInstance.GetAlbums().Count;
+            Assert.Greater(albumCount, 0);
         }
     }
 }

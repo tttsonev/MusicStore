@@ -12,25 +12,16 @@ namespace SeleniumWebDriverTemplateProject.Pages
 {
     public class LoginPage : Page
     {
-        [FindsBy(How = How.LinkText, Using = "Home")]
-        public IWebElement HomeButton { get; set; }
+        [FindsBy(How = How.Id, Using = "Email")]
+        public IWebElement EmailTextBox { get; set; }
 
-        [FindsBy(How = How.LinkText, Using = "Product Category")]
-        public IWebElement ProductCategoryPage { get; set; }
-
-        [FindsBy(How = How.LinkText, Using = "All Product")]
-        public IWebElement AllProductButton { get; set; }
-
-        [FindsBy(How = How.Id, Using = "log")]
-        public IWebElement UserNameTextBox { get; set; }
-
-        [FindsBy(How = How.Id, Using = "pwd")]
+        [FindsBy(How = How.Id, Using = "Password")]
         public IWebElement PasswordTextBox { get; set; }
 
-        [FindsBy(How = How.Id, Using = "login")]
-        public IWebElement LoginButton { get; set; }
+        [FindsBy(How = How.CssSelector, Using = "div.col-md-offset-2 input.btn")]
+        public IWebElement LogInButton { get; set; }
 
-        public static string Path { get { return "/products-page/your-account/"; } }
+        public static string Path { get { return "/Account/Login"; } }
 
         public static LoginPage NavigateTo(IWebDriver driver)
         {
@@ -52,11 +43,11 @@ namespace SeleniumWebDriverTemplateProject.Pages
             return loginPageInstance;
         }
 
-        public void ValidLogIn()
+        public void LogIn()
         {
-            this.UserNameTextBox.SendKeys(GeneralSettings.Default.UserName);
+            this.EmailTextBox.SendKeys(GeneralSettings.Default.UserName);
             this.PasswordTextBox.SendKeys(GeneralSettings.Default.Password);
-            this.LoginButton.Click();
+            this.LogInButton.Click();
 
             // added because of firefox rushing
             System.Threading.Thread.Sleep(3000);
@@ -64,8 +55,12 @@ namespace SeleniumWebDriverTemplateProject.Pages
 
         public void LogIn(string username, string password)
         {
-            this.UserNameTextBox.SendKeys(username);
+            this.EmailTextBox.SendKeys(username);
             this.PasswordTextBox.SendKeys(password);
+            this.LogInButton.Click();
+
+            // added because of firefox rushing
+            System.Threading.Thread.Sleep(3000);
         }
     }
 }

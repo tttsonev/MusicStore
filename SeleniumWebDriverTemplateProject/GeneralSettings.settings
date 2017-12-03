@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="BaseURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://store.demoqa.com/</Value>
+      <Value Profile="(Default)">http://qaf2017demo1-001-site1.dtempurl.com/</Value>
     </Setting>
     <Setting Name="TestsToRunOnSingleWebDriverInstance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>
@@ -24,10 +24,10 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="UserName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">FranzFischbach@gmail.com</Value>
+      <Value Profile="(Default)">Administrator@Test.com</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">pass1234</Value>
+      <Value Profile="(Default)">YouShouldChangeThisPassword1!</Value>
     </Setting>
   </Settings>
 </SettingsFile>
